@@ -110,11 +110,11 @@ export default function HomePage() {
                   </span>
                   <span className="text-lg font-medium text-gray-700 dark:text-gray-200">efetobor3x@gmail.com</span>
                 </a>
-                <a href="tel:+23470491488850" className="group flex items-center gap-4 p-4 rounded-lg bg-blue-50 dark:bg-blue-900 hover:bg-blue-100 dark:hover:bg-blue-800 transition shadow-md">
+                <a href="tel:+2347049148850" className="group flex items-center gap-4 p-4 rounded-lg bg-blue-50 dark:bg-blue-900 hover:bg-blue-100 dark:hover:bg-blue-800 transition shadow-md">
                   <span className="text-blue-600 dark:text-blue-400 group-hover:scale-125 group-hover:rotate-12 transition-transform duration-300">
                     <FaPhone size={40} />
                   </span>
-                  <span className="text-lg font-medium text-gray-700 dark:text-gray-200">+234 704 914 88850</span>
+                  <span className="text-lg font-medium text-gray-700 dark:text-gray-200">+234 704 914 8850</span>
                 </a>
                 <a href="https://github.com/Oyibo-Efetobor" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 p-4 rounded-lg bg-blue-50 dark:bg-blue-900 hover:bg-blue-100 dark:hover:bg-blue-800 transition shadow-md">
                   <span className="text-blue-600 dark:text-blue-400 group-hover:scale-125 group-hover:rotate-12 transition-transform duration-300">
