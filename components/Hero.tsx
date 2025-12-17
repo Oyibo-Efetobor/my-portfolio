@@ -1,13 +1,15 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
-import { FaDownload } from 'react-icons/fa';
+import React, { useEffect, useRef, useState } from 'react';
+import { FaEye } from 'react-icons/fa';
 import Typed from 'typed.js';
 import Image from 'next/image';
+import ResumeModal from './ResumeModal';
 
 export const Hero = () => {
   // Create reference to store the DOM element containing the animation
   const el = useRef(null);
+  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
   useEffect(() => {
     const typed = new Typed(el.current, {
@@ -68,13 +70,12 @@ export const Hero = () => {
               </a>
             </div>
             <div className="flex items-center gap-4 mt-4">
-              <a
-                href="/resume.pdf"
-                className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-                download
+              <button
+                onClick={() => setIsResumeModalOpen(true)}
+                className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline cursor-pointer"
               >
-                <FaDownload /> Download Resume
-              </a>
+                <FaEye /> View Resume
+              </button>
             </div>
           </div>
           <div className="flex items-center justify-center">
@@ -91,6 +92,13 @@ export const Hero = () => {
           </div>
         </div>
       </div>
+
+      {/* Resume Modal */}
+      <ResumeModal 
+        isOpen={isResumeModalOpen}
+        onClose={() => setIsResumeModalOpen(false)}
+        resumeUrl="/resume.pdf"
+      />
     </section>
   );
 };
