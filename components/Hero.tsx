@@ -40,13 +40,41 @@ export const Hero = () => {
       <div className="container px-4 md:px-6 mx-auto">
         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
           <div className="flex flex-col justify-center space-y-4">
-            <div className="space-y-2">
+            {/* Mobile: Image beside heading */}
+            <div className="flex items-start justify-between gap-4 lg:hidden">
+              <div className="flex-1 space-y-2">
+                <div className="inline-block rounded-lg bg-gray-100 dark:bg-gray-800 px-3 py-1 text-sm mb-2">
+                  <span className="text-blue-600 dark:text-blue-400">Welcome to my portfolio</span>
+                </div>
+                <h1 className="text-2xl font-bold tracking-tighter sm:text-3xl">
+                  Hi, I'm OYIBO Efetobor
+                </h1>
+              </div>
+              <div className="flex-shrink-0">
+                <div className="relative w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] overflow-hidden rounded-full border-2 border-gray-200 dark:border-gray-800 bg-gradient-to-b from-blue-100 to-blue-50 dark:from-blue-900 dark:to-gray-900">
+                  <Image 
+                    src="/images/pfp.png" 
+                    alt="Oyibo Efetobor" 
+                    fill
+                    sizes="100px"
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Desktop: Normal heading */}
+            <div className="hidden lg:block space-y-2">
               <div className="inline-block rounded-lg bg-gray-100 dark:bg-gray-800 px-3 py-1 text-sm mb-4">
                 <span className="text-blue-600 dark:text-blue-400">Welcome to my portfolio</span>
               </div>
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                 Hi, I'm OYIBO Efetobor
               </h1>
+            </div>
+
+            <div className="space-y-2">
               <h2 className="flex items-center text-xl sm:text-2xl">
                 I'm a <span className="text-blue-600 dark:text-blue-400 ml-2" ref={el}></span>
               </h2>
@@ -78,7 +106,8 @@ export const Hero = () => {
               </button>
             </div>
           </div>
-          <div className="flex items-center justify-center">
+          {/* Desktop: Large image on the right */}
+          <div className="hidden lg:flex items-center justify-center">
             <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px] overflow-hidden rounded-full border-4 border-gray-200 dark:border-gray-800 bg-gradient-to-b from-blue-100 to-blue-50 dark:from-blue-900 dark:to-gray-900">
               <Image 
                 src="/images/pfp.png" 
